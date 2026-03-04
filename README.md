@@ -2,7 +2,6 @@
 Beginner backend project using Flask and OpenWeather API.
 
 
-
 🌦 Real-Time Weather Dashboard
 
 A backend-driven weather web application built using Flask that fetches and displays real-time weather data using the OpenWeather API.
