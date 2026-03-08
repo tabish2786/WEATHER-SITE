@@ -42,25 +42,6 @@ weather-dashboard
 └── README.md
 
 
-⚙️ Installation
-
-Clone the repository
-
-git clone https://github.com/yourusername/weather-dashboard.git
-
-Go to the project folder
-
-cd weather-dashboard
-
-Install dependencies
-
-pip install flask requests
-
-Run the application
-
-python app.py
-
-
 🌐 Usage
 
 Open browser and visit
