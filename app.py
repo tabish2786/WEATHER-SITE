@@ -1,12 +1,15 @@
 from flask import Flask, render_template, request, jsonify
 import requests
 import os
+
 app = Flask(__name__)
 API = os.getenv("0994648b3e1187d9108c93795cf9bb07") or "0994648b3e1187d9108c93795cf9bb07"
 @app.route("/")
+
 def home():
     return render_template("index.html")
 @app.route("/weather", methods=["POST"])
+
 def get_weather():
     data = request.get_json()
     city = data.get("city")
@@ -37,5 +40,6 @@ def get_weather():
             "ok": False,
             "error": "Network error, try again"
         })
+        
 if __name__ == "__main__":
     app.run(debug=True)
