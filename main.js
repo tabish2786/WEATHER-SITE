@@ -3,10 +3,8 @@ const input = document.getElementById("cityInput");
 const result = document.getElementById("result");
 const error = document.getElementById("error");
 const empty = document.getElementById("empty");
-
-// 🔍 SEARCH EVENT
 form.addEventListener("submit", async (e) => {
-    e.preventDefault();   // 🚨 page reload rokta hai
+    e.preventDefault();
 
     const city = input.value.trim();
 
@@ -15,7 +13,6 @@ form.addEventListener("submit", async (e) => {
         return;
     }
 
-    // UI reset
     error.innerText = "";
     empty.style.display = "none";
     result.innerHTML = "Loading... ⏳";
@@ -43,7 +40,6 @@ form.addEventListener("submit", async (e) => {
 });
 
 
-// 🌦 SHOW WEATHER
 function showWeather(w) {
     result.innerHTML = `
     <h2>${w.city}</h2>
@@ -75,12 +71,8 @@ function showWeather(w) {
     </div>
 `;
 }
-// ❌ SHOW ERROR
 function showError(msg) {
     result.innerHTML = "";
     error.innerText = msg;
 }
-
-
-// 🎯 AUTO FOCUS
 input.focus();
