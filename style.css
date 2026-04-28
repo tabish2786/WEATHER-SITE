@@ -1,0 +1,142 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 360px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+    animation: fade 0.8s ease-in;
+}
+
+/* ===== TITLE ===== */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* ===== INPUT ===== */
+input {
+    padding: 12px;
+    width: 65%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+/* ===== BUTTON ===== */
+button {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #ff7e5f;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #feb47b;
+    transform: scale(1.05);
+}
+
+/* ===== ERROR ===== */
+.error {
+    color: #ff4d4d;
+    margin-top: 10px;
+}
+
+/* ===== RESULT ===== */
+#result {
+    margin-top: 20px;
+}
+
+/* ===== ICON ===== */
+#result img {
+    width: 80px;
+}
+
+/* ===== TEMP ===== */
+#result h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+/* ===== CITY ===== */
+#result h2 {
+    font-size: 24px;
+}
+
+/* ===== CONDITION ===== */
+#result p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ===== EXTRA INFO ===== */
+.extra {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.extra div {
+    background: rgba(255,255,255,0.15);
+    padding: 10px;
+    border-radius: 10px;
+    width: 30%;
+    transition: 0.3s;
+}
+.extra div p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+}
+
+.extra div strong {
+    font-size: 18px;
+}
+.extra div:hover {
+    transform: scale(1.08);
+}
+
+/* ===== EMPTY TEXT ===== */
+#empty {
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+
+    input {
+        width: 60%;
+    }
+}
