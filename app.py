@@ -1,36 +1,21 @@
 from flask import Flask, render_template, request, jsonify
 import requests
 import os
-
 app = Flask(__name__)
-
-# 🔐 API key (better: environment variable)
 API = os.getenv("0994648b3e1187d9108c93795cf9bb07") or "0994648b3e1187d9108c93795cf9bb07"
-
-
-# 🌐 Home route (UI load)
 @app.route("/")
 def home():
     return render_template("index.html")
-
-
-# 🌦 Weather API route (AJAX)
 @app.route("/weather", methods=["POST"])
 def get_weather():
-
     data = request.get_json()
     city = data.get("city")
-
-    # ❗ Empty input check
     if not city:
         return jsonify({"ok": False, "error": "Enter a city name"})
-
     try:
         url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API}&units=metric"
         response = requests.get(url, timeout=5)
         data = response.json()
-
-        # ✅ Success
         if response.ok:
             weather = {
                 "city": city.title(),
@@ -42,22 +27,15 @@ def get_weather():
                 "icon": data["weather"][0]["icon"]
             }
             return jsonify({"ok": True, "weather": weather})
-
-        # ❌ API error (wrong city etc.)
         else:
             return jsonify({
                 "ok": False,
                 "error": data.get("message", "City not found")
             })
-
-    # ❌ Network / timeout error
     except requests.exceptions.RequestException:
         return jsonify({
             "ok": False,
             "error": "Network error, try again"
         })
-
-
-# 🚀 Run server
 if __name__ == "__main__":
     app.run(debug=True)
