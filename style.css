@@ -1,11 +1,10 @@
-/* ===== RESET ===== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
 body {
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #4facfe, #00f2fe);
@@ -15,8 +14,6 @@ body {
     align-items: center;
     color: white;
 }
-
-/* ===== CONTAINER ===== */
 .container {
     width: 360px;
     padding: 30px;
@@ -27,13 +24,10 @@ body {
     text-align: center;
     animation: fade 0.8s ease-in;
 }
-
-/* ===== TITLE ===== */
 h1 {
     margin-bottom: 20px;
 }
 
-/* ===== INPUT ===== */
 input {
     padding: 12px;
     width: 65%;
@@ -42,7 +36,6 @@ input {
     outline: none;
 }
 
-/* ===== BUTTON ===== */
 button {
     padding: 12px;
     border-radius: 10px;
@@ -58,40 +51,33 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* ===== ERROR ===== */
 .error {
     color: #ff4d4d;
     margin-top: 10px;
 }
 
-/* ===== RESULT ===== */
 #result {
     margin-top: 20px;
 }
 
-/* ===== ICON ===== */
 #result img {
     width: 80px;
 }
 
-/* ===== TEMP ===== */
 #result h1 {
     font-size: 48px;
     margin: 10px 0;
 }
 
-/* ===== CITY ===== */
 #result h2 {
     font-size: 24px;
 }
 
-/* ===== CONDITION ===== */
 #result p {
     font-size: 18px;
     opacity: 0.9;
 }
 
-/* ===== EXTRA INFO ===== */
 .extra {
     display: flex;
     justify-content: space-between;
@@ -118,19 +104,15 @@ button:hover {
     transform: scale(1.08);
 }
 
-/* ===== EMPTY TEXT ===== */
 #empty {
     margin-top: 15px;
     opacity: 0.8;
 }
-
-/* ===== ANIMATION ===== */
 @keyframes fade {
     from {opacity: 0;}
     to {opacity: 1;}
 }
 
-/* ===== RESPONSIVE ===== */
 @media(max-width: 400px) {
     .container {
         width: 90%;
