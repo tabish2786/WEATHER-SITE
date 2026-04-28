@@ -3,6 +3,7 @@ const input = document.getElementById("cityInput");
 const result = document.getElementById("result");
 const error = document.getElementById("error");
 const empty = document.getElementById("empty");
+
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
